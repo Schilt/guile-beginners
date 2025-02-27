@@ -2,6 +2,14 @@
 
 ;; -- Your Solution Here
 
+(define (find-number num lst)
+  (define (find list)
+    (and (pair? list)
+	 (if (eqv? num (car list))
+	       num
+	       (find (cdr list)))))
+  (find lst))
+
 ;; -- Validation
 
 (test-begin "find-number")

@@ -1,0 +1,40 @@
+%%%% Starting test find-number
+Group begin: find-number
+Test begin:
+  test-name: "Finds 2"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-number.scm"
+  source-line: 17
+  source-form: (test-eqv "Finds 2" 2 (find-number 2 (quote (1 2 3 4 5))))
+Test end:
+  result-kind: pass
+  actual-value: 2
+  expected-value: 2
+Test begin:
+  test-name: "Finds 5"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-number.scm"
+  source-line: 21
+  source-form: (test-eqv "Finds 5" 5 (find-number 5 (quote (1 2 3 4 5))))
+Test end:
+  result-kind: pass
+  actual-value: 5
+  expected-value: 5
+Test begin:
+  test-name: "Doesn't find 6"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-number.scm"
+  source-line: 25
+  source-form: (test-eqv "Doesn't find 6" #f (find-number 6 (quote (1 2 3 4 5))))
+Test end:
+  result-kind: pass
+  actual-value: #f
+  expected-value: #f
+Test begin:
+  test-name: "Returns #f when given an empty list"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-number.scm"
+  source-line: 29
+  source-form: (test-eqv "Returns #f when given an empty list" #f (find-number 6 (quote ())))
+Test end:
+  result-kind: pass
+  actual-value: #f
+  expected-value: #f
+Group end: find-number
+# of expected passes      4

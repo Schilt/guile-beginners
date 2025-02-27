@@ -1,0 +1,58 @@
+%%%% Starting test simple-calculator
+Group begin: simple-calculator
+Test begin:
+  test-name: "Starts at 0"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 29
+  source-form: (test-eqv "Starts at 0" 0 (get-result))
+Test end:
+  result-kind: pass
+  actual-value: 0
+  expected-value: 0
+Test begin:
+  test-name: "Adds 5"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 33
+  source-form: (test-eqv "Adds 5" 5 (begin (add! 5) (get-result)))
+Test end:
+  result-kind: pass
+  actual-value: 5
+  expected-value: 5
+Test begin:
+  test-name: "Subtracts 3"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 39
+  source-form: (test-eqv "Subtracts 3" 2 (begin (subtract! 3) (get-result)))
+Test end:
+  result-kind: pass
+  actual-value: 2
+  expected-value: 2
+Test begin:
+  test-name: "Multiplies by 4"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 45
+  source-form: (test-eqv "Multiplies by 4" 8 (begin (multiply! 4) (get-result)))
+Test end:
+  result-kind: pass
+  actual-value: 8
+  expected-value: 8
+Test begin:
+  test-name: "Divides by 2"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 51
+  source-form: (test-eqv "Divides by 2" 4 (begin (divide! 2) (get-result)))
+Test end:
+  result-kind: pass
+  actual-value: 4
+  expected-value: 4
+Test begin:
+  test-name: "Clears the result"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/simple-calculator.scm"
+  source-line: 57
+  source-form: (test-eqv "Clears the result" 0 (begin (clear!) (get-result)))
+Test end:
+  result-kind: pass
+  actual-value: 0
+  expected-value: 0
+Group end: simple-calculator
+# of expected passes      6

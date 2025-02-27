@@ -2,6 +2,26 @@
 
 ;; -- Your Solution Here
 
+(define result 0)
+
+(define (add! value)
+  (set! result (+ result value)))
+
+(define (subtract! value)
+  (set! result (- result value)))
+
+(define (multiply! value)
+  (set! result (* result value)))
+
+(define (divide! value)
+  (set! result (/ result value)))
+
+(define (clear!)
+  (set! result 0))
+
+(define (get-result)
+  result)
+
 ;; -- Validation
 
 (test-begin "simple-calculator")
