@@ -2,6 +2,18 @@
 
 ;; -- Your Solution Here
 
+(define (filter-numbers num lst)
+  (define (filter rev-lst new-lst)
+    (if (pair? rev-lst)
+	(if (number? (car rev-lst))
+	    (if ( >= (car rev-lst) num)
+		(filter (cdr rev-lst) (cons (car rev-lst) new-lst))
+	        (filter (cdr rev-lst) new-lst))
+	    (filter (cdr rev-lst) new-lst))
+	new-lst))
+  (filter (reverse lst) '()))
+  
+
 ;; -- Validation
 
 (test-begin "filter-numbers")

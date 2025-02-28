@@ -1,0 +1,49 @@
+%%%% Starting test find-value
+Group begin: find-value
+Test begin:
+  test-name: "Finds value for \"foo\""
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-value.scm"
+  source-line: 18
+  source-form: (test-eqv "Finds value for \"foo\"" 35 (find-value "foo" (quote ("foo" 35 "bar" "the value" "baz" yes))))
+Test end:
+  result-kind: pass
+  actual-value: 35
+  expected-value: 35
+Test begin:
+  test-name: "Finds value for \"baz\""
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-value.scm"
+  source-line: 23
+  source-form: (test-eqv "Finds value for \"baz\"" (quote yes) (find-value "baz" (quote ("foo" 35 "bar" "the value" "baz" yes))))
+Test end:
+  result-kind: pass
+  actual-value: yes
+  expected-value: yes
+Test begin:
+  test-name: "Uses equal? for key comparison"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-value.scm"
+  source-line: 28
+  source-form: (test-eqv "Uses equal? for key comparison" (quote yes) (find-value (substring "baz" 0 3) (quote ("foo" 35 "bar" "the value" "baz" yes))))
+Test end:
+  result-kind: pass
+  actual-value: yes
+  expected-value: yes
+Test begin:
+  test-name: "Returns #f when given a key that is found at the end of the list with no value"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-value.scm"
+  source-line: 33
+  source-form: (test-eqv "Returns #f when given a key that is found at the end of the list with no value" #f (find-value "baz" (quote ("baz"))))
+Test end:
+  result-kind: pass
+  actual-value: #f
+  expected-value: #f
+Test begin:
+  test-name: "Returns #f for empty list"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/find-value.scm"
+  source-line: 37
+  source-form: (test-eqv "Returns #f for empty list" #f (find-value "baz" (quote ())))
+Test end:
+  result-kind: pass
+  actual-value: #f
+  expected-value: #f
+Group end: find-value
+# of expected passes      5

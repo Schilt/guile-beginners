@@ -2,6 +2,15 @@
 
 ;; -- Your Solution Here
 
+(define (find-value key lst)
+  (and (pair? lst)
+       (if (equal? key (car lst))
+	   (if (pair? (cdr lst))
+	       (car (cdr lst))
+	       #f)
+	   (and (pair? (cdr lst))
+		(find-value key (cdr (cdr lst)))))))
+
 ;; -- Validation
 
 (test-begin "find-value")
