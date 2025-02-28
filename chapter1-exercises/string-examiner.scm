@@ -2,6 +2,16 @@
 
 ;; -- Your Solution Here
 
+(define (examine-string str target-len)
+  (string-append "The string '" str "' with "
+		 (number->string (string-length str)) " characters is "
+		 (if (>= (string-length str) target-len)
+		     "equal to or longer than "
+		     "shorter than ")
+		 (number->string target-len)
+		 " characters."))
+	      
+
 ;; -- Validation
 
 (test-begin "string-examiner")

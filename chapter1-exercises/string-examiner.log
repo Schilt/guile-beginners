@@ -1,0 +1,31 @@
+%%%% Starting test string-examiner
+Group begin: string-examiner
+Test begin:
+  test-name: "Correct result when input is equal to or longer than target length"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/string-examiner.scm"
+  source-line: 19
+  source-form: (test-equal "Correct result when input is equal to or longer than target length" (examine-string "System Crafters" 12) "The string 'System Crafters' with 15 characters is equal to or longer than 12 characters.")
+Test end:
+  result-kind: pass
+  actual-value: "The string 'System Crafters' with 15 characters is equal to or longer than 12 characters."
+  expected-value: "The string 'System Crafters' with 15 characters is equal to or longer than 12 characters."
+Test begin:
+  test-name: "Correct result when input is shorter than target length"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/string-examiner.scm"
+  source-line: 23
+  source-form: (test-equal "Correct result when input is shorter than target length" (examine-string "Scheme" 10) "The string 'Scheme' with 6 characters is shorter than 10 characters.")
+Test end:
+  result-kind: pass
+  actual-value: "The string 'Scheme' with 6 characters is shorter than 10 characters."
+  expected-value: "The string 'Scheme' with 6 characters is shorter than 10 characters."
+Test begin:
+  test-name: "Correct result when input is equal to target length"
+  source-file: "/Users/aas/Developer/guile-beginners/chapter1-exercises/string-examiner.scm"
+  source-line: 27
+  source-form: (test-equal "Correct result when input is equal to target length" (examine-string "Scheme" 6) "The string 'Scheme' with 6 characters is equal to or longer than 6 characters.")
+Test end:
+  result-kind: pass
+  actual-value: "The string 'Scheme' with 6 characters is equal to or longer than 6 characters."
+  expected-value: "The string 'Scheme' with 6 characters is equal to or longer than 6 characters."
+Group end: string-examiner
+# of expected passes      3
